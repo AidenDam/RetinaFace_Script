@@ -8,6 +8,8 @@ model = torch.jit.script(net, img_raw)
 
 model.save('mobilenet0.25_script.pth')  
 
+model = torch.jit.load('mobilenet0.25_script.pth')
+
 main(model)
 
 print(net)
